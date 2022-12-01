@@ -9,6 +9,7 @@ import numpy as np
 
 
 def SolveAdvectionDiffusion(T, u, v, dx, dy, Nx, Ny, q, k, rho, Cp):
+    # Pouya
     T_t = T.copy()
 
     #Interior Nodes
@@ -34,6 +35,7 @@ def SolveAdvectionDiffusion(T, u, v, dx, dy, Nx, Ny, q, k, rho, Cp):
 def calPoisson(u_div, dt, rho, Nx, Ny, tol):
     p = np.zeros([Nx+1,Ny+1])
     err = 1
+    # Jinho
     while err > tol:
         newp[1:Nx,1:Ny] = 
         err = np.max(np.abs(newp - p))
@@ -41,9 +43,11 @@ def calPoisson(u_div, dt, rho, Nx, Ny, tol):
     return p
 
 def calPressureGradient(p, dx, dy, Nx, Ny):
+    # Pouya
     return dp_x, dp_y
 
 def calVelocityDivergence(us, vs, dx, dy, Nx, Ny):
+    # Pouya
     return u_div
 
 def NavierStokesTemperature(u_bc_h, u_bc_v, v_bc_h, v_bc_v, Ta, nu, dt, dx, dy, lx, ly, \
