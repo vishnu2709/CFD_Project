@@ -43,7 +43,7 @@ def calPoisson(u_div, dt, rho, Nx, Ny, tol):
     return p
 
 def calPressureGradient(p, dx, dy, Nx, Ny):
-    # Pouya
+    # Jinho
     return dp_x, dp_y
 
 def calVelocityDivergence(us, vs, dx, dy, Nx, Ny):
